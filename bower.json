@@ -1,0 +1,21 @@
+{
+  "name": "purescript-test",
+  "version": "0.0.0",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "purescript-lists":"~0.6.0",
+    "purescript-math": "~0.1.1",
+    "purescript-globals": "~0.1.6",
+    "purescript-strings": null,
+    "purescript-maybe": null,
+    "purescript-either": null,
+    "purescript-tuples": null
+  }
+}
