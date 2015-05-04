@@ -36,6 +36,12 @@ module.exports = function(grunt) {
     c6e12out: "dist/c6e12.js",
     c6e14out: "dist/c6e14.js",
     c6e15out: "dist/c6e15.js",
+    c7e1out: "dist/c7e1.js",
+    c7e3out: "dist/c7e3.js",
+    c7e4out: "dist/c7e4.js",
+    c7e6out: "dist/c7e6.js",
+    c7e7out: "dist/c7e7.js",
+    c7e8out: "dist/c7e8.js",
 
     psc: {
       helloworld: {
@@ -293,6 +299,54 @@ module.exports = function(grunt) {
         },
         src: ["<%=srcFiles%>"],
         dest: "<%=c6e15out%>"
+      },
+      c7e1: {
+        options: {
+          main: "Chapter7.Exercise1",
+          modules: ["Chapter7.Exercise1"]          
+        },
+        src: ["<%=srcFiles%>"],
+        dest: "<%=c7e1out%>"
+      },
+      c7e3: {
+        options: {
+          main: "Chapter7.Exercise3",
+          modules: ["Chapter7.Exercise3"]          
+        },
+        src: ["<%=srcFiles%>"],
+        dest: "<%=c7e3out%>"
+      },
+      c7e4: {
+        options: {
+          main: "Chapter7.Exercise4",
+          modules: ["Chapter7.Exercise4"]          
+        },
+        src: ["<%=srcFiles%>"],
+        dest: "<%=c7e4out%>"
+      },
+      c7e6: {
+        options: {
+          main: "Chapter7.Exercise6",
+          modules: ["Chapter7.Exercise6"]          
+        },
+        src: ["<%=srcFiles%>"],
+        dest: "<%=c7e6out%>"
+      },
+      c7e7: {
+        options: {
+          main: "Chapter7.Exercise7",
+          modules: ["Chapter7.Exercise7", "Chapter7.AddressBook", "Chapter7.AddressBook.Validation"]          
+        },
+        src: ["<%=srcFiles%>"],
+        dest: "<%=c7e7out%>"
+      },
+      c7e8: {
+        options: {
+          main: "Chapter7.Exercise8",
+          modules: ["Chapter7.Exercise8"]          
+        },
+        src: ["<%=srcFiles%>"],
+        dest: "<%=c7e8out%>"
       }
     },
 
@@ -389,6 +443,24 @@ module.exports = function(grunt) {
       },
       c6e15: {
           src: "<%=c6e15out%>"
+      },
+      c7e1: {
+          src: "<%=c7e1out%>"
+      },
+      c7e3: {
+          src: "<%=c7e3out%>"
+      },
+      c7e4: {
+          src: "<%=c7e4out%>"
+      },
+      c7e6: {
+          src: "<%=c7e6out%>"
+      },
+      c7e7: {
+          src: "<%=c7e7out%>"
+      },
+      c7e8: {
+          src: "<%=c7e8out%>"
       }
     }
 
@@ -429,5 +501,11 @@ module.exports = function(grunt) {
   grunt.registerTask('c6e12', ['psc:c6e12', 'execute:c6e12']);
   grunt.registerTask('c6e14', ['psc:c6e14', 'execute:c6e14']);
   grunt.registerTask('c6e15', ['psc:c6e15', 'execute:c6e15']);
+  grunt.registerTask('c7e1', ['psc:c7e1', 'execute:c7e1']);
+  grunt.registerTask('c7e3', ['psc:c7e3', 'execute:c7e3']);
+  grunt.registerTask('c7e4', ['psc:c7e4', 'execute:c7e4']);
+  grunt.registerTask('c7e6', ['psc:c7e6', 'execute:c7e6']);
+  grunt.registerTask('c7e7', ['psc:c7e7', 'execute:c7e7']);
+  grunt.registerTask('c7e8', ['psc:c7e8', 'execute:c7e8']);
 
 };

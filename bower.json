@@ -16,6 +16,7 @@
     "purescript-strings": null,
     "purescript-maybe": null,
     "purescript-either": null,
-    "purescript-tuples": null
+    "purescript-tuples": null,
+    "purescript-validation": null
   }
 }
