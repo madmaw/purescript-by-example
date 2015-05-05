@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
 
-    srcFiles: ["src/**/*.purs", "bower_components/**/src/**/*.purs"],
+    srcFiles: ["src/**/*.purs", "lib/**/*.purs", "bower_components/**/src/**/*.purs"],
     c4e1out: "dist/c4e1.js",
     c4e2out: "dist/c4e2.js",
     c4e3out: "dist/c4e3.js",
@@ -42,6 +42,12 @@ module.exports = function(grunt) {
     c7e6out: "dist/c7e6.js",
     c7e7out: "dist/c7e7.js",
     c7e8out: "dist/c7e8.js",
+    c8e1out: "dist/c8e1.js",
+    c8e2out: "dist/c8e2.js",
+    c8e5out: "dist/c8e5.js",
+    c8e7out: "dist/c8e7.js",
+    c8e8out: "dist/c8e8.js",
+    c8e9out: "dist/c8e9.js",
 
     psc: {
       helloworld: {
@@ -347,6 +353,53 @@ module.exports = function(grunt) {
         },
         src: ["<%=srcFiles%>"],
         dest: "<%=c7e8out%>"
+      },
+      c8e1: {
+        options: {
+          main: "Chapter8.Exercise1",
+          modules: ["Chapter8.Exercise1"]          
+        },
+        src: ["<%=srcFiles%>"],
+        dest: "<%=c8e1out%>"
+      },
+      c8e2: {
+        options: {
+          main: "Chapter8.Exercise2",
+          modules: ["Chapter8.Exercise2"]          
+        },
+        src: ["<%=srcFiles%>"],
+        dest: "<%=c8e2out%>"
+      },
+      c8e5: {
+        options: {
+          main: "Chapter8.Exercise5",
+          modules: ["Chapter8.Exercise5"]          
+        },
+        src: ["<%=srcFiles%>"],
+        dest: "<%=c8e5out%>"
+      },
+      c8e7: {
+        options: {
+          main: "Chapter8.Exercise7",
+          modules: ["Chapter8.Exercise7"]          
+        },
+        src: ["<%=srcFiles%>"],
+        dest: "<%=c8e7out%>"
+      },
+      c8e8: {
+        options: {
+          main: "Chapter8.Exercise8",
+          modules: ["Chapter8.Exercise8"]          
+        },
+        src: ["<%=srcFiles%>"],
+        dest: "<%=c8e8out%>"
+      },
+      c8e9: {
+        options: {
+          modules: ["Chapter8.Exercise9", "Chapter8.AddressBook", "Chapter8.AddressBook.UI", "Chapter8.AddressBook.Validation", "Control.Monad.Eff.DOM"]
+        },
+        src: ["<%=srcFiles%>"],
+        dest: "<%=c8e9out%>"
       }
     },
 
@@ -461,15 +514,33 @@ module.exports = function(grunt) {
       },
       c7e8: {
           src: "<%=c7e8out%>"
+      },
+      c8e1: {
+          src: "<%=c8e1out%>"
+      },
+      c8e2: {
+          src: "<%=c8e2out%>"
+      },
+      c8e5: {
+          src: "<%=c8e5out%>"
+      },
+      c8e7: {
+          src: "<%=c8e7out%>"
+      },
+      c8e8: {
+          src: "<%=c8e8out%>"
       }
-    }
+    },
+
+    dotPsci: ["<%=srcFiles%>"]
 
   });
+
 
   grunt.loadNpmTasks("grunt-purescript");
   grunt.loadNpmTasks("grunt-execute");
   
-  grunt.registerTask("default", ["psc"]);
+  grunt.registerTask("default", ["dotPsci"]);
   grunt.registerTask('c4e1', ['psc:c4e1', 'execute:c4e1']);
   grunt.registerTask('c4e2', ['psc:c4e2', 'execute:c4e2']);
   grunt.registerTask('c4e3', ['psc:c4e3', 'execute:c4e3']);
@@ -507,5 +578,11 @@ module.exports = function(grunt) {
   grunt.registerTask('c7e6', ['psc:c7e6', 'execute:c7e6']);
   grunt.registerTask('c7e7', ['psc:c7e7', 'execute:c7e7']);
   grunt.registerTask('c7e8', ['psc:c7e8', 'execute:c7e8']);
+  grunt.registerTask('c8e1', ['psc:c8e1', 'execute:c8e1']);
+  grunt.registerTask('c8e2', ['psc:c8e2', 'execute:c8e2']);
+  grunt.registerTask('c8e5', ['psc:c8e5', 'execute:c8e5']);
+  grunt.registerTask('c8e7', ['psc:c8e7', 'execute:c8e7']);
+  grunt.registerTask('c8e8', ['psc:c8e8', 'execute:c8e8']);
+  grunt.registerTask('c8e9', ['psc:c8e9']);
 
 };

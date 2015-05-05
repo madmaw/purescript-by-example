@@ -10,13 +10,16 @@
     "tests"
   ],
   "dependencies": {
-    "purescript-lists":"~0.6.0",
-    "purescript-math": "~0.1.1",
-    "purescript-globals": "~0.1.6",
+    "purescript-lists": null,
+    "purescript-math": null,
+    "purescript-globals": null,
     "purescript-strings": null,
     "purescript-maybe": null,
     "purescript-either": null,
     "purescript-tuples": null,
-    "purescript-validation": null
+    "purescript-validation": null,
+    "purescript-exceptions": null,
+    "purescript-random": null,
+    "purescript-foreign": null
   }
 }
